@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-br">
+	<head>
+		<title>ImageZoom</title>
+    	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+        <meta name="description" content="jquery"/>
+        <meta name="keywords" content="jquery" />
+		<meta name="robots" content="all, index, follow" />
+		<link href="_style/default.css" rel="stylesheet" type="text/css"/>
+		<script type="text/javascript" src="_scripts/jquery-1.2.6.pack.js"></script>
+		<script type="text/javascript" src="_scripts/imageZoom_v4.js"></script>		
+		<style type="text/css">
+			body{ padding-top: 5px; }
+			img{ visibility:hidden; }
+			div#container_image{ float: left; margin-right: 5px; width:351px; height:233px; position: relative; overflow:hidden;  }
+			div#container_image img#image{ position: absolute; left:0; top:0; }  
+			div#container_thumb{ width: 110px; height: 73px; float: left; position: relative; overflow:hidden; cursor: none;}
+			div#container_thumb img#thumb{ width: 100%; }
+			div.shadow{ position:absolute;top:0;left:0;width:0;height:0; background:#000; overflow:hidden; }
+			#shadow_1, #shadow_3, #shadow_4{ width: 100%; }
+
+		</style>
+	</head>
+  	<body>
+		<div id="container_image">
+			<img src="../imagens/criando_css/css1.PNG" alt="tubarão" id="image"/>		
+		</div>	
+		<div id="container_thumb">
+                    <img src="../imagens/criando_css/css1.PNG" id="thumb"/>
+		<div id="container_thumb">
+	</body>
+</html>

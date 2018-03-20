@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>O que é HTML? - Center HTML</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Jonas Kuhn">
+        <meta name="description" content="O que é HTML?">
+        <link rel="shortcut icon" href="../imagens/parte1.png" type="image/x-icon" />
+        <link rel="stylesheet" type="text/css" href="../home.css">
+        <script type="text/javascript" src="../jquery-3.2.1.js"></script>
+    </head>
+
+    <!---------------INICIO BODY-------------->
+    <body bgcolor="black">
+
+        <!-------------------INICIO LOADING---------------->
+        <div id="preloader">
+            <img src="../imagens/imgfundo.jpg">
+            <div id="status">
+                <div class="sk-cube-grid">
+                    <div class="sk-cube sk-cube1"></div>
+                    <div class="sk-cube sk-cube2"></div>
+                    <div class="sk-cube sk-cube3"></div>
+                    <div class="sk-cube sk-cube4"></div>
+                    <div class="sk-cube sk-cube5"></div>
+                    <div class="sk-cube sk-cube6"></div>
+                    <div class="sk-cube sk-cube7"></div>
+                    <div class="sk-cube sk-cube8"></div>
+                    <div class="sk-cube sk-cube9"></div>
+                </div>
+            </div>
+        </div>
+        <script>
+            $(window).on('load', function () {
+                $('#preloader').delay(600).fadeOut('slow');
+                $('body').delay(600).css({'overflow': 'visible'});
+            });
+        </script>
+        <!-------------------FIM LOADING---------------->
+
+        <div id="fundo-externo">
+            <div id="fundo">
+                <img src="../imagens/imgfundo.jpg" alt="">
+            </div>
+        </div>
+
+        <!---------------INICIO SITE-------------->
+        <div id="site">
+            <div class="home" name="home">
+                <a href="../index.html"><img id="home" src="../imagens/parte1.png" alt="HOME"></a>
+                <img id="home1" src="../imagens/parte2.png" alt="">
+            </div>
+            <div class="trava"></div>
+
+            <div id="busca">
+                <input type="text" id="txtBusca" placeholder="Buscar..."/>
+                <button id="btnBusca">Buscar</button>
+            </div>
+            <div class="trava"></div>
+
+            <<!---------------INICIO SCRIPT DO MENU-------------->
+            <script>
+                $(document).ready(function () {
+                    $("#accordian h3").click(function () {
+                        //slide up all the link lists
+                        $("#accordian ul ul").slideUp();
+                        //slide down the link list below the h3 clicked - only if its closed
+                        if (!$(this).next().is(":visible"))
+                        {
+                            $(this).next().slideDown();
+                        }
+                    });
+                })
+            </script>
+            <!---------------FIM SCRIPT DO MENU-------------->
+
+            <!---------------INICIO DO MENU-------------->
+            <div id="accordian">
+                <ul>
+                    <li>
+                        <h3 id="menuHome"><a href="../home.html">HOME</a></h3>
+                    </li>
+                    <li>
+                        <h3>Conteúdos HTML</h3>
+                        <ul>
+                            <li><a href="../menu/apicacoes_e_websites.html">Aplicações e Sites Web</a></li>
+                            <li><a href="../menu/html.html">O que é HTML?</a></li>
+                            <li><a href="../menu/criando_projeto.html">Criando um projeto</a></li>
+                            <li><a href="../menu/estrutura_basica.html">Estrutura Básica</a></li>
+                            <li><a href="../menu/conhecendo_tags.html">Conhecendo as Tags</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>Conteúdos CSS</h3>
+                        <ul>
+                            <li><a href="o_que_e_css.html">O que é css?</a></li>
+                            <li><a href="incluir_na_página.html">Incluindo o CSS na Página</a></li>
+                            <li><a href="criando_css.html">Criando o CSS</a></li>
+                            <li><a href="id_class.html">Id X Class</a></li>
+                            <li><a href="aplicando_css.html">Aplicando o CSS</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>  
+            <!---------------FIM DO MENU-------------->
+
+            <!---------------INICIO DO CONTEUDO-------------->
+            <div class="descricao">
+                <p class="titulo"> O que é HTML?</p>
+                <div class="campo">
+                    <p>HTML é uma das linguagens que utilizamos para desenvolver websites. 
+                        O acrônimo HTML vem do inglês e significa Hypertext Markup Language 
+                        ou em português Linguagem de Marcação de Hipertexto.</p>
+
+                    <p>O HTML é a liguagem base da internet. Foi criada para ser de 
+                        fácil entendimento por seres humanos e também por máquinas, 
+                        como por exemplo o Google ou outros sistemas que percorrem a 
+                        internet capturando informação.</p>
+                </div>
+                <p class="subtitulo">Quem criou o HTML?</p>
+                <div class="campo">
+                    <p>Quem criou o HTML foi Tim Berners-Lee. Ele o criou para a 
+                        comunicação e disseminação de pesquisas entre ele e seu 
+                        grupo de colegas. O HTML ficou bastante conhecido quando 
+                        começou a ser utilizada para formar a rede pública daquela 
+                        época, o que se tornaria mais tarde a internet que conhecemos hoje.</p>
+                </div>
+                <p class="subtitulo">O que são tags?</p>
+                <div class="campo">
+                    <p>Tags são rótulos usados para informar ao navegador como deve 
+                        ser apresentado o website.</p>
+                    <p>Todas as tags têm o mesmo formato: começam com um sinal de 
+                        menor "<" e acabam com um sinal de maior ">".</p>
+                    <p class="comandos">Existem dois tipos de tags - tags de abertura: 
+                        <img src="../imagens/html/abre_comando.PNG" alt="Abre Comando"> e tags 
+                        de fechamento:<img src="../imagens/html/fecha_comando.PNG" alt="Fecha Comando">. 
+                        A diferença entre elas é que na tag de fechamento existe um barra "/".</p>
+                    <p>Tudo que estiver contido entre uma tag de abertura e uma tag 
+                        de fechamento será processado segundo o comando contido na tag.</p>
+                    <p>Mas, como toda regra tem sua exceção, aqui no HTML a exceção é 
+                        que para algumas tags a abertura e o fechamento se dá na mesma tag. 
+                        Tais tags contém comandos que não necessitam de um conteúdo para serem 
+                        processados, isto é, são tags de comandos isolados.</p>
+                </div>
+                <p><strong>Mas tudo isso pode ser melhor entendido no tópico <a href="conhecendo_tags.html">"Conhecendo as Tags"</a>.</strong></p>
+
+            </div> 
+            <!---------------FIM CONTEUDO-------------->
+
+            <!---------------INICIO COMENTARIOS---------->
+            <div class="box_coment">
+                <a id="link" href="#a">COMENTÁRIOS</a>
+
+                <script type="text/javascript">
+                    $(document).ready(function () {
+
+                        $("#coments").hide();
+                        $("#link").click(function () {
+
+                            $("#coments").slideToggle("slow");
+                        });
+                    });
+                </script>
+            </div>
+
+            <div id="coments">
+                <h1>(2) Comentários</h1>
+
+                <hr>
+
+                <section class="box-comentario">
+                    <aside class="foto-contato">
+                        <div>
+                            <img src="../imagens/ususarios/icon_usuario_homem.png" alt="img_usuário">
+                        </div>
+                    </aside>
+                    <article class="comentario">
+
+                        <header class="titulo-comentario">
+                            <b>João Donel</b>
+                            <a class="responderComentario" href="#a">&#8629;</a>
+                            <p class="dataComentario">19 de Novembro 2017 às 09:15</p>
+                            <p>Parabéns pelo excelente material !!!</p>
+                        </header>
+                    </article>
+                </section>
+
+                <section class="box-comentario1">
+                    <article class="comentario1">
+                        <header class="titulo-comentario1">
+                            <b>Center HTML</b>
+                            <p class="dataComentario">19 de Novembro 2017 às 09:20</p>
+                            <p>Agradecemos pelo comentário, com ele podemos 
+                                melhorar e acrescentar conteúdos.</p>
+                        </header>
+                        <aside class="foto-contato1">
+                            <div class="img_coment">
+                                <img src="../imagens/ususarios/icon_admiun.png" alt="img_usuário">
+                            </div>
+                        </aside>
+                    </article>
+
+                </section>
+
+                <hr>
+                <h1>Deixe seu comentário</h1>
+
+                <div class="areaDoComentario">
+                    <textarea id="comment" name="comment" title="Comentário"
+                              style="height: 70px; overflow: hidden; resize: none;">Insira seu comentário aqui...
+                    </textarea>
+
+                    <script>
+                        var msg = $('#comment').val();
+                        $('#comment').focus(
+                                function () {
+                                    if ($(this).val() == msg)
+                                        $(this).val("");
+                                }
+                        );
+                        $('#comment').blur(
+                                function () {
+                                    if ($(this).val() == "")
+                                        $(this).val(msg);
+                                }
+                        );
+                    </script>
+
+                    <div id="camposUsuarioComentario">
+
+                        <p>Preencha seus dados abaixo:</p>
+                        <textarea id="email" 
+                                  title="Email" 
+                                  style="height: 25px;
+                                  width: 735px;
+                                  overflow: hidden;
+                                  resize: none;
+                                  margin: 5px;">Email (obrigatório)
+                        </textarea>
+
+                        <script type="text/javascript">
+                            $(document).ready(function () {
+                                $("#camposUsuarioComentario").hide();
+                                $("#comment").click(function () {
+                                    $("#camposUsuarioComentario").slideToggle("slow");
+                                });
+                            });
+                        </script>
+
+                        <script>
+                            var msg2 = $('#email').val();
+                            $('#email').focus(
+                                    function () {
+                                        if ($(this).val() == msg2)
+                                            $(this).val("");
+                                    }
+                            );
+                            $('#email').blur(
+                                    function () {
+                                        if ($(this).val() == "")
+                                            $(this).val(msg2);
+                                    }
+                            );
+                        </script>
+
+                        <textarea id="nome" 
+                                  title="Nome" 
+                                  style="height: 25px;
+                                  width: 735px;
+                                  overflow: hidden;
+                                  resize: none;
+                                  margin: 5px;">Nome (obrigatório)
+                        </textarea>
+
+                        <script>
+                            var msg3 = $('#nome').val();
+                            $('#nome').focus(
+                                    function () {
+                                        if ($(this).val() == msg3)
+                                            $(this).val("");
+                                    }
+                            );
+                            $('#nome').blur(
+                                    function () {
+                                        if ($(this).val() == "")
+                                            $(this).val(msg3);
+                                    }
+                            );
+                        </script>
+
+                        <div id="comentar">
+                            <button id="btnComentar">Publicar comentário</button>
+                        </div>
+                    </div>
+                </div>
+            </div>     
+
+            <!---------------FIM COMENTARIOS---------->
+
+            <!----------------INICIO BTN_TOPO--------->
+            <div class="topo">
+                <a id="btn_topo" href="#home"><img src="../imagens/icones/btn_topo.png" alt="Botão Topo"></a>
+            </div>
+            <div class="trava"></div>
+
+            <script>
+                var $doc = $('html, body');
+                $('#btn_topo').click(function () {
+                    $doc.animate({
+                        scrollTop: $($.attr(this, 'href')).offset().top
+                    }, 1000);
+                    return false;
+                });
+            </script>
+            <!----------------FIM BTN_TOPO--------->
+
+            <div class="trava"></div>
+
+            <!---------------INICIO RODAPÉ-------------->
+            <div class="rodape-principais">  
+                <div class="sobre">
+                    <p class="destaqueParagrafoRodape">&#10170; SOBRE O CENTER HTML</p>
+                    <p>O Center Html é um site
+                        para Iniciantes em programação Web, que oferece 
+                        tutoriais sobre Front-end (HTML e CSS).</p>
+                    <br>
+                    <p class="destaqueParagrafoRodape">&#10170; SOBRE O AUTOR</p>
+                    <p>Jonas Kuhn esta cursando GTI (UCEFF - Campus de Itapiranga)
+                        e desenvolveu esse website em uma matéria da grade curricular.
+                        É Rio Grandense, e mora em
+                        Itapiranga - SC . Quando tem algum tempo livre, atualiza esse site.</p>
+                </div>
+
+                <div class="tutoriais">
+                    <p class="destaqueParagrafoRodape">&#10170; MELHOERES TUTORIAIS</p>
+
+                    <a href="../menu/criando_projeto.html">&#8669; Criando um Projeto no NetBeans</a>
+                    <br>
+                    <a href="../menu/criando_css.html">&#8669; Criando CSS</a>
+
+                </div>
+
+                <div class="topicos">
+                    <p class="destaqueParagrafoRodape">&#10170;TÓPICOS</p>
+                    <a id="html" href="../menu/html.html"><p class="paragrafoTopico">&#10168; HTML</p></a>
+                    <a id="tags" href="../menu/conhecendo_tags.html"><p class="paragrafoTopico">&#10168; TAGS</p></a>
+                    <div class="trava"></div> 
+                    <a id="css" href="../menu/html.html"><p class="paragrafoTopico">&#10168; CSS</p></a>
+                    <a id="id" href="../menu/id_class.html"><p class="paragrafoTopicoId">&#10168; ID x CLASS</p></a>
+                    <div class="trava"></div> 
+
+                </div>
+                <div class="trava"></div>
+            </div>
+
+            <div class="rodape">
+                <p>© 2017 Center HTML - Todos direitos reservados</p>
+            </div> 
+
+            <div class="rodape-contato">
+                <div class="popup" onclick="myFunction()">
+                    <img id="wpp" src="../imagens/icones/wpp.png" title="Whatsapp" alt="Whatsapp">
+                    <span class="popuptext" id="meuPopup">(49) 98435-5344</span>
+                    <script>
+                        function myFunction() {
+                            var popup = document.getElementById("meuPopup");
+                            popup.classList.toggle("show");
+                        }
+                    </script>
+                </div>
+                <a href="https://www.facebook.com/jonas.kuhn.14" target="_blank">
+                    <img id="fb" src="../imagens/icones/fb.png" title="Facebook" alt="Facebook"></a>
+
+                <a href="https://twitter.com/login?lang=pt" target="_blank">
+                    <img id="twt" src="../imagens/icones/twt.ico" title="Twitter" alt="Twitter"></a>
+
+                <a href="https://plus.google.com/s/html/top?hl=pt-BR" target="_blank">
+                    <img id="g" src="../imagens/icones/google.png" title="Google +" alt="Google"></a>
+            </div>
+            <div class="trava"></div>
+
+            <!---------------FIM RODAPÉ-------------->
+        </div>
+        <!---------------FIM SITE-------------->
+    </body>
+    <!---------------FIM BODY-------------->
+</html>

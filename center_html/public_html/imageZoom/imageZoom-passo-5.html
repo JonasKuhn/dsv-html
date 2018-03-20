@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-br">
+	<head>
+		<title>ImageZoom</title>
+    	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+        <meta name="description" content="jquery"/>
+        <meta name="keywords" content="jquery" />
+		<meta name="robots" content="all, index, follow" />
+		<link href="_style/default.css" rel="stylesheet" type="text/css"/>
+		<script type="text/javascript" src="_scripts/jquery-1.2.6.pack.js"></script>
+		<script type="text/javascript" src="_scripts/imageZoom_v5.js"></script>
+		<style type="text/css">
+			div#container_image { float: left; margin-right: 5px; width:448px; height:310px; position: relative; overflow:hidden;  }
+			div#container_image img#image { position: absolute; left:0; top:0; visibility: hidden; }  
+			ul.options{ float: left; width: 10px; visibility: hidden;  }
+			ul.options li { width: 15px; margin-bottom: 5px; height: 15px; }
+			ul.options li a { font-size: 10px; line-height: 10px; vertical-align: middle; padding: 1px 0 4px 0; width: 15px; display: block; text-decoration: none; height: 10px;background:#000; color:#fff; text-align: center; }
+		</style>
+	</head>
+  	<body>
+		<div id="container_image">
+			<img src="_images/wall.jpg" id="image"/>
+		</div>		
+		<ul class="options">
+			<li><a href="#" title="+" class="mais tamanho">+</a></li>
+			<li><a href="#" title="+" class="menos tamanho">-</a></li>
+		</ul>
+	</body>
+</html>

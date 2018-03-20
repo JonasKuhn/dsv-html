@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Aplicando o CSS - Center HTML</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Jonas Kuhn">
+        <meta name="description" content="Aplicando o CSS">
+        <link rel="stylesheet" type="text/css" href="../home.css">
+        <link rel="shortcut icon" href="../imagens/parte1.png" type="image/x-icon" />
+        <script type="text/javascript" src="../jquery-3.2.1.js"></script>
+    </head>
+
+    <!---------------INICIO BODY-------------->
+    <body bgcolor="black">
+
+        <!-------------------INICIO LOADING---------------->
+        <div id="preloader">
+            <img src="../imagens/imgfundo.jpg">
+            <div id="status">
+                <div class="sk-cube-grid">
+                    <div class="sk-cube sk-cube1"></div>
+                    <div class="sk-cube sk-cube2"></div>
+                    <div class="sk-cube sk-cube3"></div>
+                    <div class="sk-cube sk-cube4"></div>
+                    <div class="sk-cube sk-cube5"></div>
+                    <div class="sk-cube sk-cube6"></div>
+                    <div class="sk-cube sk-cube7"></div>
+                    <div class="sk-cube sk-cube8"></div>
+                    <div class="sk-cube sk-cube9"></div>
+                </div>
+            </div>
+        </div>
+        <script>
+            $(window).on('load', function () {
+                $('#preloader').delay(600).fadeOut('slow');
+                $('body').delay(600).css({'overflow': 'visible'});
+            });
+        </script>
+        <!-------------------FIM LOADING---------------->
+
+        <div id="fundo-externo">
+            <div id="fundo">
+                <img src="../imagens/imgfundo.jpg" alt="">
+            </div>
+        </div>
+
+        <!---------------INICIO SITE-------------->        
+        <div id="site">
+            <div class="home" name="home">
+                <a href="../index.html"><img id="home" src="../imagens/parte1.png" alt="HOME"></a>
+                <img id="home1" src="../imagens/parte2.png" alt="">
+            </div>
+
+            <div class="trava"></div>
+
+            <div id="busca">
+                <input type="text" id="txtBusca" placeholder="Buscar..."/>
+                <button id="btnBusca">Buscar</button>
+            </div>
+            <div class="trava"></div>
+
+            <!---------------INICIO SCRIPT DO MENU-------------->
+            <script>
+                $(document).ready(function () {
+                    $("#accordian h3").click(function () {
+                        //slide up all the link lists
+                        $("#accordian ul ul").slideUp();
+                        //slide down the link list below the h3 clicked - only if its closed
+                        if (!$(this).next().is(":visible"))
+                        {
+                            $(this).next().slideDown();
+                        }
+                    });
+                });
+            </script>
+            <!---------------FIM SCRIPT DO MENU-------------->
+
+            <!---------------INICIO DO MENU-------------->
+            <div id="accordian">
+                <ul>
+                    <li>
+                        <h3 id="menuHome"><a href="../home.html">HOME</a></h3>
+                    </li>
+                    <li>
+                        <h3>Conteúdos HTML</h3>
+                        <ul>
+                            <li><a href="../menu/apicacoes_e_websites.html">Aplicações e Sites Web</a></li>
+                            <li><a href="../menu/html.html">O que é HTML?</a></li>
+                            <li><a href="../menu/criando_projeto.html">Criando um projeto</a></li>
+                            <li><a href="../menu/estrutura_basica.html">Estrutura Básica</a></li>
+                            <li><a href="../menu/conhecendo_tags.html">Conhecendo as Tags</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>Conteúdos CSS</h3>
+                        <ul>
+                            <li><a href="o_que_e_css.html">O que é css?</a></li>
+                            <li><a href="incluir_na_página.html">Incluindo o CSS na Página</a></li>
+                            <li><a href="criando_css.html">Criando o CSS</a></li>
+                            <li><a href="id_class.html">Id X Class</a></li>
+                            <li><a href="aplicando_css.html">Aplicando o CSS</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>  
+            <!---------------FIM DO MENU-------------->
+
+            <!---------------INÍCIO CONTEUDO-------------->
+            <div class="descricao"> 
+                <p class="titulo">Aplicação do CSS</p>
+                <p>Para conseguirmos ter um bom proveito do CSS e saber quais os atributos 
+                    usar para em determindo momento do código, vamos ver e entender alguns termos 
+                    que mais usamos no css.</p>
+                <br>
+                <div class="campo">
+                    <p class="subtitulo">background</p>
+                    <p>Esse atributo pode ser usado quando queremos adicionar uma
+                        cor de fundo, uma imagem e a transparência das mesmas.</p>
+                    <p>Como existem vários atributos com border's vamos fazer uma lista 
+                        (para funcionar deve-se por border + um dos atributos a seguir):</p>
+
+                    <ul>
+                        <li><strong>attachment:</strong> Possibilita adicionarmos 
+                            uma imagem como uma espécie de marca D'Água.</li>
+                        <li><strong>image:</strong> Possibilita adicionarmos uma imagem de fundo.</li>
+                        <li><strong>color:</strong> Possibilita adicionarmos uma cor de fundo e sua transparência.</li>
+                        <li><strong>position:</strong> Configurar a posição da imagem.</li>
+                        <li><strong>repeat:</strong> É capas de configurar a apresentação da imagem, se quer repetir
+                            ela lado-a-lado.</li>
+                    </ul>
+                </div>
+
+                <div class="campo">
+                    <p class="subtitulo">border</p>
+                    <p>Configura a largura, estilo e cor de todas as 4 bordas.</p>
+                    <p>Como existem vários atributos com border's vamos fazer uma lista 
+                        (para funcionar deve-se por border + um dos atributos a seguir):</p>
+
+                    <ul>
+                        <li><strong>bottom, right, left, top:</strong> Configura a 
+                            largura, estilo e cor da borda inferior.</li>
+                        <li><strong>top, left, right, bottom + :</strong></li>
+                        <ul>
+                            <li><strong>color:</strong> Configura a cor da borda de baixo.</li>
+                            <li><strong>style:</strong> Configura o estilo da citada borda.</li>
+                            <li><strong>width:</strong> Configura a largura da citada borda.</li>
+                            EX: <br> border-bottom: ....<br>
+                            border-left-color: ....
+                        </ul>  
+                    </ul>
+                    <br>
+                </div>
+                <div class="campo">
+                    <ul>
+                        <li><strong>clear:</strong> Elementos flutuantes à esquerda ou à direita de um elemento.</li>
+                        <li><strong>clip:</strong> Parte visível de um elemento.</li>
+                        <li><strong>color:</strong> Cor de primeiro plano.</li>
+                        <li><strong>cursor:</strong> Tipo de ponteiro do mouse.</li>
+                        <li><strong>display:</strong> Se o elemento é exibido e o espaço é reservado para ele.</li>
+                        <li><strong>filter:</strong> Tipo de filtro aplicado ao elemento.</li>
+                        <li><strong>float:</strong> Se o elemento flutua, geralmente utilizado pra organizar as DIV's 
+                            da página.</li>
+                    </ul>
+                </div>
+
+                <div class="campo">
+                    <p class="subtitulo">font</p>
+                    <p>Estilo, variante, peso, tamanho e altura da linha do tipo de fonte.</p>
+                    <ul>
+                        <li><strong>font + :</strong></li>
+                        <ul>
+                            <li><strong>family:</strong> Tipo de fonte.</li>
+                            <li><strong>size:</strong> Tamanho da fonte.</li>
+                            <li><strong>style:</strong> Permite definir o estilo da fonte.</li>
+                            <li><strong>weight:</strong> Peso da fonte de claro a negrito.</li>
+                            EX: <br> font-family: ....
+                        </ul>   
+                    </ul>
+                    <br>
+                </div>
+
+                <div class="campo">
+                    <ul>
+                        <li><strong>height:</strong> Altura exibida ao elemento.</li>
+                        <li><strong>@import:</strong> Folha de estilo a importar.</li>
+                        <li><strong>left:</strong> Posição do elemento em relação a margem esquerda da página.</li>
+                        <li><strong>letter-spacing:</strong> Distância entre as letras.</li>
+                        <li><strong>line-height:</strong> Distância entre linhas de base.</li>
+                        <li><strong>list-style:</strong> Tipo, imagem e posição do estilo da lista.</li>
+                        <li><strong>list-style-image:</strong> Marcador de item de lista.</li>
+                        <li><strong>list-style-position:</strong> Posição do marcador de item da lista.</li>
+                        <li><strong>list-style-type</strong> Marcador de item de lista alternativo.</li>
+                    </ul>
+                </div>
+
+                <div class="campo"> 
+                    <ul>
+                        <li><strong>margin + :</strong> Tamanho de todas as 4 margens.</li>
+                        <ul>
+                            <li><strong>left, right, bottom, top:</strong> Tamanho da margem referida.</li>
+                        </ul>     
+                    </ul>
+                    <br>
+                </div>
+                <div class="campo">
+                    <ul
+                        <li><strong>overflow:</strong> Exibição de imagens que são maiores do que suas molduras.</li>
+                        <li><strong>padding +:</strong> Espaço em torno de um elemento em todos os lados.</li>
+                        <ul>
+                            <li><strong>left, right, bottom, top:</strong> Espaço a partir da margem referida.</li>
+                        </ul>     
+                        <br>
+
+                        <li><strong>text +:</strong></li>
+                        <ul>
+                            <li><strong>align:</strong> Alinhamento do texto.</li>
+                            <li><strong>decoration:</strong> Sublinhado, sobrelinhado ou riscado.</li>
+                        </ul>     
+                        <br>
+
+                        <li><strong>indent:</strong> Recuo da primeira linha do parágrafo.</li>
+                        <li><strong>transform:</strong> Transformação para todas maiúsculas, minúsculas ou inicial maiúscula.</li>
+                        <li><strong>visibility:</strong> Se elemento é visível ou invisível.</li>
+                        <li><strong>width:</strong> Largura do elemento.</li>
+                        <div class="trava"></div>
+                    </ul>
+                </div>
+            </div>
+            <!---------------FIM CONTEUDO-------------->
+
+            <!---------------INICIO COMENTARIOS---------->
+            <div class="box_coment">
+                <a id="link" href="#a">COMENTÁRIOS</a>
+
+                <script type="text/javascript">
+                    $(document).ready(function () {
+
+                        $("#coments").hide();
+                        $("#link").click(function () {
+
+                            $("#coments").slideToggle("slow");
+                        });
+                    });
+                </script>
+            </div>
+
+            <div id="coments">
+                <h1>(2) Comentários</h1>
+
+                <hr>
+
+                <section class="box-comentario">
+                    <aside class="foto-contato">
+                        <div>
+                            <img src="../imagens/ususarios/icon_usuario_homem.png" alt="img_usuário">
+                        </div>
+                    </aside>
+                    <article class="comentario">
+
+                        <header class="titulo-comentario">
+                            <b>João Donel</b>
+                            <a class="responderComentario" href="#a">&#8629;</a>
+                            <p class="dataComentario">19 de Novembro 2017 às 09:15</p>
+                            <p>Parabéns pelo excelente material !!!</p>
+                        </header>
+                    </article>
+                </section>
+
+                <section class="box-comentario1">
+                    <article class="comentario1">
+                        <header class="titulo-comentario1">
+                            <b>Center HTML</b>
+                            <p class="dataComentario">19 de Novembro 2017 às 09:20</p>
+                            <p>Agradecemos pelo comentário, com ele podemos 
+                                melhorar e acrescentar conteúdos.</p>
+                        </header>
+                        <aside class="foto-contato1">
+                            <div class="img_coment">
+                                <img src="../imagens/ususarios/icon_admiun.png" alt="img_usuário">
+                            </div>
+                        </aside>
+                    </article>
+
+                </section>
+
+                <hr>
+                <h1>Deixe seu comentário</h1>
+
+                <div class="areaDoComentario">
+                    <textarea id="comment" name="comment" title="Comentário"
+                              style="height: 70px; overflow: hidden; resize: none;">Insira seu comentário aqui...
+                    </textarea>
+
+                    <script>
+                        var msg = $('#comment').val();
+                        $('#comment').focus(
+                                function () {
+                                    if ($(this).val() == msg)
+                                        $(this).val("");
+                                }
+                        );
+                        $('#comment').blur(
+                                function () {
+                                    if ($(this).val() == "")
+                                        $(this).val(msg);
+                                }
+                        );
+                    </script>
+
+                    <div id="camposUsuarioComentario">
+
+                        <p>Preencha seus dados abaixo:</p>
+                        <textarea id="email" 
+                                  title="Email" 
+                                  style="height: 25px;
+                                  width: 735px;
+                                  overflow: hidden;
+                                  resize: none;
+                                  margin: 5px;">Email (obrigatório)
+                        </textarea>
+
+                        <script type="text/javascript">
+                            $(document).ready(function () {
+                                $("#camposUsuarioComentario").hide();
+                                $("#comment").click(function () {
+                                    $("#camposUsuarioComentario").slideToggle("slow");
+                                });
+                            });
+                        </script>
+
+                        <script>
+                            var msg2 = $('#email').val();
+                            $('#email').focus(
+                                    function () {
+                                        if ($(this).val() == msg2)
+                                            $(this).val("");
+                                    }
+                            );
+                            $('#email').blur(
+                                    function () {
+                                        if ($(this).val() == "")
+                                            $(this).val(msg2);
+                                    }
+                            );
+                        </script>
+
+                        <textarea id="nome" 
+                                  title="Nome" 
+                                  style="height: 25px;
+                                  width: 735px;
+                                  overflow: hidden;
+                                  resize: none;
+                                  margin: 5px;">Nome (obrigatório)
+                        </textarea>
+
+                        <script>
+                            var msg3 = $('#nome').val();
+                            $('#nome').focus(
+                                    function () {
+                                        if ($(this).val() == msg3)
+                                            $(this).val("");
+                                    }
+                            );
+                            $('#nome').blur(
+                                    function () {
+                                        if ($(this).val() == "")
+                                            $(this).val(msg3);
+                                    }
+                            );
+                        </script>
+
+                        <div id="comentar">
+                            <button id="btnComentar">Publicar comentário</button>
+                        </div>
+                    </div>
+                </div>
+            </div>     
+
+            <!---------------FIM COMENTARIOS---------->
+
+            <!----------------INICIO BTN_TOPO--------->
+            <div class="topo">
+                <a id="btn_topo" href="#home"><img src="../imagens/icones/btn_topo.png" alt="Botão Topo"></a>
+            </div>
+            <div class="trava"></div>
+
+            <script>
+                var $doc = $('html, body');
+                $('#btn_topo').click(function () {
+                    $doc.animate({
+                        scrollTop: $($.attr(this, 'href')).offset().top
+                    }, 1000);
+                    return false;
+                });
+            </script>
+            <!----------------FIM BTN_TOPO--------->
+
+            <div class="trava"></div>
+
+            <!---------------INICIO RODAPÉ-------------->
+            <div class="rodape-principais">  
+                <div class="sobre">
+                    <p class="destaqueParagrafoRodape">&#10170; SOBRE O CENTER HTML</p>
+                    <p>O Center Html é um site
+                        para Iniciantes em programação Web, que oferece 
+                        tutoriais sobre Front-end (HTML e CSS).</p>
+                    <br>
+                    <p class="destaqueParagrafoRodape">&#10170; SOBRE O AUTOR</p>
+                    <p>Jonas Kuhn esta cursando GTI (UCEFF - Campus de Itapiranga)
+                        e desenvolveu esse website em uma matéria da grade curricular.
+                        É Rio Grandense, e mora em
+                        Itapiranga - SC . Quando tem algum tempo livre, atualiza esse site.</p>
+                </div>
+
+                <div class="tutoriais">
+                    <p class="destaqueParagrafoRodape">&#10170; MELHOERES TUTORIAIS</p>
+
+                    <a href="../menu/criando_projeto.html">&#8669; Criando um Projeto no NetBeans</a>
+                    <br>
+                    <a href="../menu/criando_css.html">&#8669; Criando CSS</a>
+
+                </div>
+
+                <div class="topicos">
+                    <p class="destaqueParagrafoRodape">&#10170;TÓPICOS</p>
+                    <a id="html" href="../menu/html.html"><p class="paragrafoTopico">&#10168; HTML</p></a>
+                    <a id="tags" href="../menu/conhecendo_tags.html"><p class="paragrafoTopico">&#10168; TAGS</p></a>
+                    <div class="trava"></div> 
+                    <a id="css" href="../menu/html.html"><p class="paragrafoTopico">&#10168; CSS</p></a>
+                    <a id="id" href="../menu/id_class.html"><p class="paragrafoTopicoId">&#10168; ID x CLASS</p></a>
+                    <div class="trava"></div> 
+
+                </div>
+                <div class="trava"></div>
+            </div>
+
+            <div class="rodape">
+                <p>© 2017 Center HTML - Todos direitos reservados</p>
+            </div> 
+
+            <div class="rodape-contato">
+                <div class="popup" onclick="myFunction()">
+                    <img id="wpp" src="../imagens/icones/wpp.png" title="Whatsapp" alt="Whatsapp">
+                    <span class="popuptext" id="meuPopup">(49) 98435-5344</span>
+                    <script>
+                        function myFunction() {
+                            var popup = document.getElementById("meuPopup");
+                            popup.classList.toggle("show");
+                        }
+                    </script>
+                </div>
+                <a href="https://www.facebook.com/jonas.kuhn.14" target="_blank">
+                    <img id="fb" src="../imagens/icones/fb.png" title="Facebook" alt="Facebook"></a>
+
+                <a href="https://twitter.com/login?lang=pt" target="_blank">
+                    <img id="twt" src="../imagens/icones/twt.ico" title="Twitter" alt="Twitter"></a>
+
+                <a href="https://plus.google.com/s/html/top?hl=pt-BR" target="_blank">
+                    <img id="g" src="../imagens/icones/google.png" title="Google +" alt="Google"></a>
+            </div>
+            <div class="trava"></div>
+            <!---------------FIM RODAPÉ-------------->
+        </div>
+        <!---------------FIM SITE-------------->
+    </body>
+    <!---------------FIM BODY-------------->
+</html>
