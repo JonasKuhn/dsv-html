@@ -1,0 +1,192 @@
+ <!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta id="viewport" name="viewport" content="width=device-width, user-scalable=no">
+	<title>Portal</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/main.css">
+	<script type="text/javascript" src="assets/js/script.js"></script>
+</head>
+<body>
+	<div class="topo">
+		<div class="topo-interno">
+			<div class="topo-left">
+				<ul>
+					<li><a href="index.html" class="ativo">Home</a></li>
+					<li><a href="#">Quem Somos?</a></li>
+					<li><a href="#">Anuncie Aqui</a></li>
+					<li><a href="#">Contato</a></li>
+				</ul>
+			</div>
+			<div class="topo-right">
+
+				<input type="image" border="0" width="26" height="26" src="assets/img/lupa.png"> 
+				<input class="topo-busca" type="text" name="busca" placeholder="Busca..."
+				 src="assets/img/lupa.png">
+				<a href="#"><img src="assets/img/youtube.png" border="0" width="26" height="26"></a>
+				<a href="#"><img src="assets/img/twitter.png" border="0" width="26" height="26"></a>
+				<a href="#"><img src="assets/img/facebook.png" border="0" width="26" height="26"></a>
+				<a href="#"><img src="assets/img/googleplus.png" border="0" width="26" height="26"></a>
+				<a href="#"><img src="assets/img/rss.png" border="0" width="26" height="26"></a>
+			</div>
+		</div>
+	</div>
+	<div class="cabecalho">
+		<div class="cabecalho-interno">
+			<div class="logo">
+				<img src="assets/img/logo.png" border="0" width="230">
+			</div>
+			<div class="banner">
+				
+			</div>
+		</div>
+	</div>
+	<div class="menu">
+		<div class="menu-interno">
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Economia</a></li>
+				<li>
+					<a href="#">Entreterimento</a>
+					<img src="assets/img/arrow.png" border="0" width="15">
+					<div class="submenu">
+						<a href="#"><div class="submenu-item">Sub menu 1</div></a>
+						<a href="#">
+							<div class="submenu-item">Sub menu 2
+								<img class="img-arrow" src="assets/img/arrow.right.png" border="0" width="15">
+								<div class="inter-submenu">
+									<a href="#"><div class="inter-submenu-item">Sub menu 1</div></a>
+									<a href="#"><div class="inter-submenu-item">Sub menu 2</div></a>
+									<a href="#"><div class="inter-submenu-item">Sub menu 3</div></a>
+								</div>
+							</div>
+						</a>
+						<a href="#"><div class="submenu-item">Sub menu 3</div></a>
+						<a href="#"><div class="submenu-item">Sub menu 4</div></a>
+						<a href="#"><div class="submenu-item">Sub menu 5</div></a>
+					</div>
+				</li>
+				<li>
+					<a href="#">Esportes</a>
+					<img src="assets/img/arrow.png" border="0" width="15">
+					<div class="submenu">
+						<a href="#"><div class="submenu-item sub1">Sub menu 1</div></a>
+						<a href="#"><div class="submenu-item">Sub menu 2</div></a>
+						<a href="#"><div class="submenu-item">Sub menu 3</div></a>
+					</div>
+				</li>
+				<li><a href="#">Geral</a></li>
+				<li>
+					<a href="#">Notícias</a>
+					<img src="assets/img/arrow.png" border="0" width="15">
+					<div class="submenu">
+						<a href="#"><div class="submenu-item sub1">Sub menu 1</div></a>
+						<a href="#"><div class="submenu-item">Sub menu 2</div></a>
+						<a href="#"><div class="submenu-item">Sub menu 3</div></a>
+						<a href="#"><div class="submenu-item">Sub menu 4</div></a>
+					</div>
+				</li>
+				<li><a href="#">Polícia</a></li>
+				<li><a href="#">Videos</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="ultimas-noticias">
+		<div class="ultimas-noticias-interno">
+			<div class="ultimas-noticias-area">
+				<div class="ultimas-noticias-titulo">
+					<h3>ÚLTIMAS NOTÍCIAS</h3>
+				</div>
+				<div class="ultimas-noticias-noticia">
+					<span>Alguma notícia de manchete ou em destaque.</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container">	
+		<div class="container-interno">
+			<div class="left-side">
+				<div class="slideshow" id="slideshow">
+					<div class="slidebolinhas">
+						<div class="bolinha" id="bolinha1" onclick="mudarSlide(0)"></div>
+						<div class="bolinha" id="bolinha2" onclick="mudarSlide(1)"></div>
+						<div class="bolinha" id="bolinha3" onclick="mudarSlide(2)"></div>
+						<div class="bolinha" id="bolinha4" onclick="mudarSlide(3)"></div>
+					</div>
+					<div class="slideshowarea">
+						<div class="slide" style="background-image:url('assets/img/noticia1.jpg')">
+							<div class="slideinfo">
+								<div class="slideinfo_titulo">Prédio de 24 andares desaba em incêndio no Centro de SP</div>
+								<div class="slideinfo_subtitulo">Edifício no Largo do Paissandu era ocupado irregularmente por cerca de 90 famílias. Bombeiros fazem buscas por desaparecidos.</div>
+							</div>
+						</div>
+						<div class="slide" style="background-image:url('assets/img/noticia2.jpg')">
+							<div class="slideinfo">
+								<div class="slideinfo_titulo">Titulo de teste 1</div>
+								<div class="slideinfo_subtitulo">Subtitulo de teste</div>
+							</div>
+						</div>
+						<div class="slide" style="background-image:url('assets/img/noticia3.jpg')">
+							<div class="slideinfo">
+								<div class="slideinfo_titulo">Titulo de teste 1</div>
+								<div class="slideinfo_subtitulo">Subtitulo de teste</div>
+							</div>
+						</div>
+						<div class="slide" style="background-image:url('assets/img/noticia4.jpg')">
+							<div class="slideinfo">
+								<div class="slideinfo_titulo">Titulo de teste 1</div>
+								<div class="slideinfo_subtitulo">Subtitulo de teste</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="right-side">
+				<div class="widget">
+					<div class="widget-titulo">SOCIAL</div>
+					<div class="widget-conteudo">
+						<a href="#"><img src="assets/img/rss.png" border="0" width="26" height="26"></a>
+						<a href="#"><img src="assets/img/googleplus.png" border="0" width="26" height="26"></a>
+						<a href="#"><img src="assets/img/facebook.png" border="0" width="26" height="26"></a>
+						<a href="#"><img src="assets/img/twitter.png" border="0" width="26" height="26"></a>
+						<a href="#"><img src="assets/img/youtube.png" border="0" width="26" height="26"></a>
+					</div>
+				</div>
+				<div class="widget">
+					<div class="widget-titulo">ÚLTIMAS NOTÍCIAS</div>
+					<div class="widget-conteudo">
+						<div class="noticia-item">
+							<a href="#">Titulo da noticia para que eu possa exemplificar direito.</a>
+						</div>
+						<div class="noticia-item">
+							<a href="#">Titulo da noticia para que eu possa exemplificar direito.</a>
+						</div>
+						<div class="noticia-item">
+							<a href="#">Titulo da noticia para que eu possa exemplificar direito.</a>
+						</div>
+						<div class="noticia-item">
+							<a href="#">Titulo da noticia para que eu possa exemplificar direito.</a>
+						</div>
+						<div class="noticia-item">
+							<a href="#">Titulo da noticia para que eu possa exemplificar direito.</a>
+						</div>
+					</div>
+				</div>
+				<div class="widget">
+					<div class="widget-titulo">PUBLICIDADE</div>
+					<div class="widget-conteudo">
+						<a href="#"><img src="assets/img/banner.jpg" border="0" width="273"></a>
+					</div>
+				</div>
+				<div class="widget">
+					<div class="widget-titulo">ENCONTRE-NOS NO FACEBOOK</div>
+					<div class="widget-conteudo">
+						<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FGEART-486891818186040%2F&tabs&width=273&height=214&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=192589358037113" width="273" height="214" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

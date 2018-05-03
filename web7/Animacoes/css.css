@@ -1,0 +1,103 @@
+body{
+	margin: 0;
+	padding: 0;
+	background-color: grey;
+}
+
+.load{
+	margin-left: 100px;
+	margin-top: 100px;
+	width: 100px;
+	height: 100px;
+	position: absolute;
+}
+
+.square1{
+	width: 20%;
+	height: 20%;
+	margin-left: 20%;
+	margin-top: 20%;
+	background-color: red;
+	position: absolute;
+	animation-name: teste1;
+	animation-duration: 5s;
+	border-radius: 50%;	
+	animation-iteration-count: infinite;
+}
+
+@keyframes teste1{
+	0% {top: 0%; left:0%;}
+	25% {top: 0%; left:40%;}
+	50% {top: 40%; left:40%;}
+	75% {top: 40%; left:0%;}
+	100% {top: 0%; left:0%;}
+}
+
+.square2{
+	width: 20%;
+	height: 20%;
+	margin-left: 60%;
+	margin-top: 20%;
+	background-color: blue;
+	position: absolute;
+	animation-name: teste2;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+	border-radius: 50%;	
+}
+
+@keyframes teste2{
+	0% {top: 0%; left:0%;}
+	25% {top: 40%; left:0%;}
+	50% {top: 40%; left:-40%;}
+	75% {top: 0%; left:-40%;}
+	100% {top: 0%; left:0%;}
+}
+
+.square3{
+	width: 20%;
+	height: 20%;
+	margin-left: 20%;
+	margin-top: 60%;
+	float: left;
+	background-color: green;
+	position: absolute;
+	animation-name: teste3;
+	animation-duration: 5s;
+	border-radius: 50%;	
+	animation-iteration-count: infinite;
+}
+
+@keyframes teste3{
+	0% {top: 0%; left:0%;}
+	25% {top: -40%; left:0%;}
+	50% {top: -40%; left:40%;}
+	75% {top: -0%; left:40%;}
+	100% {top: 0%; left:0%;}
+}
+
+.square4{
+	width: 20%;
+	height: 20%;
+	margin-left: 60%;
+	margin-top: 60%;
+	float: right;
+	background-color: yellow;
+	position: absolute;
+	animation-name: teste4;
+	animation-duration: 5s;
+	border-radius: 50%;	
+	animation-iteration-count: infinite;
+}
+
+@keyframes teste4{
+	0% {top: 0%; left:0%;}
+	25% {top: 0%; left:-40%;}
+	50% {top: -40%; left:-40%;}
+	75% {top: -40%; left:0%;}
+	100% {top: 0%; left:0%;}
+}
+
+
+/*animation-name: teste;
+	animation-duration: 5s;
