@@ -5,7 +5,7 @@
     </head>
     <body>
         <?php
-            $nome = "Jonas";
+            $nome = "12345678";
             //criptografia inrrevercivel 
             $senha1 = md5($nome);
             echo "Senha full: ".$senha1;
